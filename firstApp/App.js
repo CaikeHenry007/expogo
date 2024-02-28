@@ -1,6 +1,8 @@
 // Importando todos os elementos que eu vou usar
-import { StyleSheet, Text, View, TextInput, Button, Image, ImageBackground } from 'react-native';
-import SecondComponent from '../firstApp/assets/componentes/SecondComponent';
+import { Text, View, TextInput, Button, Image, ImageBackground } from 'react-native';
+import SecondComponent from './src/assets/componentes/SecondComponent';
+import { styles } from './src/styles/StyleSheet';
+
 
 
 // constante do alerta ao clicar no botão
@@ -24,7 +26,7 @@ export default function App() {
       resizeMode='repeat'>
 
 {/* Imagem menor */}
-        <Image source={require('./assets/escudo_sp-removebg-preview.png')}
+        <Image source={require('./src/assets/images/escudo_sp-removebg-preview.png')}
         style={styles.image2} 
         resizeMode='center'
         />
@@ -56,41 +58,9 @@ export default function App() {
           color='red'
         />
 
-     <View>
       <SecondComponent />
-     </View>
 
       </ImageBackground>
     </View>
   );
 }
-
-// style do site
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  
-  image: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
-  image2: {
-    width: '20%',
-    height: '10%',
-  },
-
-  inputName: {
-    borderWidth: 1,
-    borderColor: 'black',
-    padding: 15,
-    fontSize: 20,
-    backgroundColor: 'white',
-    width: '50%',
-  },
-  
-
-});
