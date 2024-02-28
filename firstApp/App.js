@@ -1,5 +1,7 @@
 // Importando todos os elementos que eu vou usar
 import { StyleSheet, Text, View, TextInput, Button, Image, ImageBackground } from 'react-native';
+import SecondComponent from '../firstApp/assets/componentes/SecondComponent';
+
 
 // constante do alerta ao clicar no botão
 export default function App() {
@@ -24,7 +26,7 @@ export default function App() {
 {/* Imagem menor */}
         <Image source={require('./assets/escudo_sp-removebg-preview.png')}
         style={styles.image2} 
-        resizeMode='cover'
+        resizeMode='center'
         />
 
 {/* Texto que fica sobre as caixas de texto */}
@@ -33,7 +35,7 @@ export default function App() {
 
 {/* Caixa de texto: Usuário */}
         <TextInput style={styles.inputName}
-          placeholder='Usuário'
+          placeholder='Email'
           inputMode='text'
           placeholderTextColor='black'
         />
@@ -54,6 +56,9 @@ export default function App() {
           color='red'
         />
 
+     <View>
+      <SecondComponent />
+     </View>
 
       </ImageBackground>
     </View>
